@@ -1,0 +1,63 @@
+body {
+  background: #0c253d;
+  color: #fff;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  margin: 0; padding: 0;
+  direction: rtl;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.hidden { display: none; }
+h1 { font-size: 3em; color: #19a3ff; text-shadow: 0 2px 10px #111; }
+button {
+  background: #19a3ff; color: #fff; border: none;
+  padding: 15px 30px; border-radius: 10px; font-size: 1.3em; margin: 10px;
+  cursor: pointer; transition: background 0.2s;
+}
+button:hover { background: #1478b8; }
+.tips {
+  background: #183a5c; padding: 15px 30px; border-radius: 10px; margin-top: 20px; max-width: 80vw;
+}
+#game-canvas {
+  background: #e7efff; border-radius: 20px; box-shadow: 0 0 20px #0008;
+  display: block; margin: 0 auto; border: 3px solid #19a3ff;
+}
+#hud {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 360px; margin: 10px auto; background: #163354dd;
+  padding: 10px 20px; border-radius: 10px; font-size: 1.2em; box-shadow: 0 2px 8px #0004;
+}
+#shop-screen {
+  flex-direction: column; align-items: center; justify-content: flex-start;
+}
+#shop-coins { font-size: 1.4em; margin-bottom: 10px; }
+.shop-list {
+  width: 350px; background: #182c48; border-radius: 12px; padding: 18px 12px;
+  display: flex; flex-direction: column; gap: 22px;
+}
+.shop-item {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #204876; border-radius: 8px; padding: 12px 10px;
+}
+.shop-info { flex: 1; }
+.shop-title { font-size: 1.2em; margin-bottom: 4px; }
+.shop-desc { font-size: 0.95em; color: #aee7ff; }
+.shop-price {
+  background: #19a3ff; color: #fff; border-radius: 8px; padding: 7px 15px; font-weight: bold;
+  margin-left: 10px;
+}
+.shop-btn {
+  background: #13c04f; border: none; color: #fff; padding: 8px 17px;
+  border-radius: 7px; font-size: 1em; cursor: pointer;
+  transition: background 0.2s;
+}
+.shop-btn[disabled] { background: #888; cursor: not-allowed; }
+.shop-btn:hover:not([disabled]) { background: #0e8d38; }
+@media (max-width: 440px) {
+  #game-canvas, #hud, .shop-list { width: 98vw; min-width: 0; }
+}
